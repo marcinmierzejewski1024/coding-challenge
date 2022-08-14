@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,19 @@
 		2349FD6D261E4F6A00A1FEAA /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD6C261E4F6A00A1FEAA /* CodingChallengeTests.swift */; };
 		2349FD78261E4F6A00A1FEAA /* CodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD77261E4F6A00A1FEAA /* CodingChallengeUITests.swift */; };
 		2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD88261E4F9900A1FEAA /* ShiftsView.swift */; };
+		567D3C1928A9660F00753C19 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C1828A9660F00753C19 /* Collections */; };
+		567D3C1B28A9660F00753C19 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C1A28A9660F00753C19 /* OrderedCollections */; };
+		567D3C1D28A9664F00753C19 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C1C28A9664F00753C19 /* ShiftCell.swift */; };
+		567D3C1F28A9668400753C19 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C1E28A9668400753C19 /* Shift.swift */; };
+		567D3C2228A969FD00753C19 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2128A969FD00753C19 /* Mocks.swift */; };
+		567D3C2528A96E1B00753C19 /* ShiftList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2428A96E1B00753C19 /* ShiftList.swift */; };
+		567D3C2828A96E6E00753C19 /* ShiftListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2728A96E6E00753C19 /* ShiftListViewModel.swift */; };
+		567D3C2A28A96ED800753C19 /* Blueprints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2928A96ED800753C19 /* Blueprints.swift */; };
+		567D3C2C28A9720900753C19 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2B28A9720900753C19 /* ApiClient.swift */; };
+		567D3C2E28A9728900753C19 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2D28A9728900753C19 /* UrlSessionApiClient.swift */; };
+		567D3C3028A976B900753C19 /* ShiftsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2F28A976B900753C19 /* ShiftsService.swift */; };
+		567D3C3328A9790300753C19 /* ShiftkeyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3228A9790300753C19 /* ShiftkeyApi.swift */; };
+		567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,17 @@
 		2349FD77261E4F6A00A1FEAA /* CodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITests.swift; sourceTree = "<group>"; };
 		2349FD79261E4F6A00A1FEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2349FD88261E4F9900A1FEAA /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
+		567D3C1C28A9664F00753C19 /* ShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
+		567D3C1E28A9668400753C19 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		567D3C2128A969FD00753C19 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		567D3C2428A96E1B00753C19 /* ShiftList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftList.swift; sourceTree = "<group>"; };
+		567D3C2728A96E6E00753C19 /* ShiftListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftListViewModel.swift; sourceTree = "<group>"; };
+		567D3C2928A96ED800753C19 /* Blueprints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blueprints.swift; sourceTree = "<group>"; };
+		567D3C2B28A9720900753C19 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		567D3C2D28A9728900753C19 /* UrlSessionApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApiClient.swift; sourceTree = "<group>"; };
+		567D3C2F28A976B900753C19 /* ShiftsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsService.swift; sourceTree = "<group>"; };
+		567D3C3228A9790300753C19 /* ShiftkeyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftkeyApi.swift; sourceTree = "<group>"; };
+		567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsServiceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567D3C1B28A9660F00753C19 /* OrderedCollections in Frameworks */,
+				567D3C1928A9660F00753C19 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +121,11 @@
 		2349FD59261E4F6900A1FEAA /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				567D3C2628A96E4A00753C19 /* ViewModels */,
+				567D3C0F28A8FF3200753C19 /* Utils */,
+				567D3C0E28A8FF1A00753C19 /* Services */,
+				567D3C0D28A8FF0900753C19 /* Views */,
+				567D3C0C28A8FF0000753C19 /* Model */,
 				2349FD5A261E4F6900A1FEAA /* CodingChallengeApp.swift */,
 				2349FD88261E4F9900A1FEAA /* ShiftsView.swift */,
 				2349FD5E261E4F6A00A1FEAA /* Assets.xcassets */,
@@ -130,6 +161,60 @@
 			path = CodingChallengeUITests;
 			sourceTree = "<group>";
 		};
+		567D3C0C28A8FF0000753C19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C1E28A9668400753C19 /* Shift.swift */,
+				567D3C2128A969FD00753C19 /* Mocks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		567D3C0D28A8FF0900753C19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C1C28A9664F00753C19 /* ShiftCell.swift */,
+				567D3C2428A96E1B00753C19 /* ShiftList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		567D3C0E28A8FF1A00753C19 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C3128A978B800753C19 /* ShiftkeyApi */,
+				567D3C2B28A9720900753C19 /* ApiClient.swift */,
+				567D3C2D28A9728900753C19 /* UrlSessionApiClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		567D3C0F28A8FF3200753C19 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C2928A96ED800753C19 /* Blueprints.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		567D3C2628A96E4A00753C19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C2728A96E6E00753C19 /* ShiftListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		567D3C3128A978B800753C19 /* ShiftkeyApi */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C3228A9790300753C19 /* ShiftkeyApi.swift */,
+				567D3C2F28A976B900753C19 /* ShiftsService.swift */,
+				567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */,
+			);
+			path = ShiftkeyApi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +231,10 @@
 			dependencies = (
 			);
 			name = CodingChallenge;
+			packageProductDependencies = (
+				567D3C1828A9660F00753C19 /* Collections */,
+				567D3C1A28A9660F00753C19 /* OrderedCollections */,
+			);
 			productName = CodingChallenge;
 			productReference = 2349FD57261E4F6900A1FEAA /* CodingChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +306,9 @@
 				Base,
 			);
 			mainGroup = 2349FD4E261E4F6900A1FEAA;
+			packageReferences = (
+				567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 2349FD58261E4F6900A1FEAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567D3C2828A96E6E00753C19 /* ShiftListViewModel.swift in Sources */,
+				567D3C3028A976B900753C19 /* ShiftsService.swift in Sources */,
+				567D3C1F28A9668400753C19 /* Shift.swift in Sources */,
+				567D3C2C28A9720900753C19 /* ApiClient.swift in Sources */,
+				567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */,
+				567D3C1D28A9664F00753C19 /* ShiftCell.swift in Sources */,
+				567D3C2A28A96ED800753C19 /* Blueprints.swift in Sources */,
 				2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */,
 				2349FD5B261E4F6900A1FEAA /* CodingChallengeApp.swift in Sources */,
+				567D3C2528A96E1B00753C19 /* ShiftList.swift in Sources */,
+				567D3C3328A9790300753C19 /* ShiftkeyApi.swift in Sources */,
+				567D3C2E28A9728900753C19 /* UrlSessionApiClient.swift in Sources */,
+				567D3C2228A969FD00753C19 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +683,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		567D3C1828A9660F00753C19 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		567D3C1A28A9660F00753C19 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2349FD4F261E4F6900A1FEAA /* Project object */;
 }

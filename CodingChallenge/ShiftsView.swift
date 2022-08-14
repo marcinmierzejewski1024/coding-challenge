@@ -11,9 +11,8 @@ struct ShiftsView: View {
     var body: some View {
         NavigationView {
             Group {
-                Text("The main view should include a list of shifts. If you tap on a shift it should show a modal shift details view. Be creative and show us your best work.")
-                    .multilineTextAlignment(.center)
-                    .padding()
+                ShiftList(shiftListViewModel: ShiftListViewModel.mocked)
+
             }
             .navigationTitle("Shifts")
         }
