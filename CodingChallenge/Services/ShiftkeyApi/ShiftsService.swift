@@ -12,9 +12,9 @@ public struct ShiftServiceRequest {
     static let BaseURL = "https://staging-app.shiftkey.com/api/v2/available_shifts"
     
     enum ListType : String {
-        case Week
+        case Week = "week"
         case FourDay = "4day"
-        case List
+        case List = "list"
     }
     
     var type : ListType?;
@@ -31,24 +31,28 @@ public struct ShiftServiceRequest {
     func urlWithParamsEncoded() -> String {
         
         var urlItems = [URLQueryItem]()
-        urlItems.append(URLQueryItem(name: "address", value: self.address))
         if let type = type {
             urlItems.append(URLQueryItem(name: "type", value: type.rawValue))
         }
         
         
         if let start = start {
-            urlItems.append(URLQueryItem(name: "start", value: start.YYYYMMDDString()))
+            urlItems.append(URLQueryItem(name: "start", value: start.YYYYMMDDString().urlEncoded))
         }
         if let end = end {
             urlItems.append(URLQueryItem(name: "end", value: end.YYYYMMDDString()))
         }
+        
         if let radius = radius {
-            urlItems.append(URLQueryItem(name: "radius", value: radius.description))
+            urlItems.append(URLQueryItem(name: "radius", value: radius.description.urlEncoded))
         }
         
+        urlItems.append(URLQueryItem(name: "address", value: self.address.urlEncoded))
+
         var urlComponents = URLComponents(string: ShiftServiceRequest.BaseURL)
         urlComponents?.queryItems = urlItems;
+        
+        
         
         return urlComponents!.url!.absoluteString;
     }

@@ -15,14 +15,14 @@ struct ShiftList: View {
         ZStack {
             
             List(){
-                ForEach(self.shiftListViewModel.sections ?? [], id: \.date ) { section in
+                ForEach(self.shiftListViewModel.sections, id: \.date ) { section in
                     Section(header: Text(section.date.YYYYMMDDString())) {
                         ForEach(section.shifts, id: \.shiftID ) { item in
                             ShiftCell(shift: item)
                             
                         }
                     }.onAppear {
-                        if section == self.shiftListViewModel.sections?.last {
+                        if section == self.shiftListViewModel.sections.last {
                             Task {
                                 await self.shiftListViewModel.loadNextShifts()
                             }

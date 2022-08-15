@@ -34,6 +34,7 @@
 		567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4728AA69CE00753C19 /* Date+pretty.swift */; };
 		567D3C4A28AA6B4100753C19 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4928AA6B4100753C19 /* PillView.swift */; };
 		567D3C4C28AA884600753C19 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4B28AA884600753C19 /* LoadingView.swift */; };
+		567D3C4F28AA95FF00753C19 /* String+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4E28AA95FF00753C19 /* String+utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		567D3C4728AA69CE00753C19 /* Date+pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+pretty.swift"; sourceTree = "<group>"; };
 		567D3C4928AA6B4100753C19 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		567D3C4B28AA884600753C19 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		567D3C4E28AA95FF00753C19 /* String+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				567D3C2928A96ED800753C19 /* Blueprints.swift */,
 				567D3C3F28A9B09E00753C19 /* Color+hex.swift */,
 				567D3C4728AA69CE00753C19 /* Date+pretty.swift */,
+				567D3C4E28AA95FF00753C19 /* String+utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				567D3C3B28A989DD00753C19 /* Register.swift in Sources */,
 				567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */,
 				567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */,
+				567D3C4F28AA95FF00753C19 /* String+utils.swift in Sources */,
 				567D3C1D28A9664F00753C19 /* ShiftCell.swift in Sources */,
 				567D3C2A28A96ED800753C19 /* Blueprints.swift in Sources */,
 				567D3C4028A9B09E00753C19 /* Color+hex.swift in Sources */,

@@ -10,7 +10,7 @@ import Resolver
 
 class ShiftListViewModel : ObservableObject, Resolving
 {
-    @Published var sections : [ShiftsWithDate]?
+    @Published var sections = [ShiftsWithDate]()
     @Published var nextDate = Date()
     @Published var loading = true
 
@@ -21,21 +21,40 @@ class ShiftListViewModel : ObservableObject, Resolving
     func loadNextShifts() async{
         do {
             self.loading = true;
-            let nextDatePlusOneWeek = self.nextDate.advanced(by: 60*60*24*7)
-            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextDatePlusOneWeek, address: "dallas, TX", radius: 5))
+            let nextPlus7Days = self.nextDate.addingTimeInterval(24*60*60*7)
+            
+            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextPlus7Days, address: "dallas,TX", radius: 5))
             if let newShiftsByDate = result.data {
-                self.sections = newShiftsByDate
+                self.addNewResultToSections(newShifts: newShiftsByDate)
                 
-                var newNextDate = Date();
-                newNextDate = newShiftsByDate.reduce(nextDate) { partialResult, shiftsWithDate in
-                    return partialResult > shiftsWithDate.date ? partialResult : shiftsWithDate.date
-                }
-                self.nextDate = newNextDate;
                 self.loading = false;
             }
         } catch {
             print(error)
         }
+    }
+    
+    
+    private func addNewResultToSections(newShifts:[ShiftsWithDate]) {
+        
+        var newNextDate = Date();
+        newNextDate = newShifts.reduce(nextDate) { partialResult, shiftsWithDate in
+            return partialResult > shiftsWithDate.date ? partialResult : shiftsWithDate.date
+        }
+        self.nextDate = newNextDate;
+
+        
+        let newWithoutEmptyAndDuplicates = newShifts.filter({ $0.shifts.count > 0 && !self.displayedDates().contains($0.date)})
+
+        self.sections.append(contentsOf: newWithoutEmptyAndDuplicates)
+        
+    }
+    
+    private func displayedDates() -> [Date]{
+        return self.sections.map { swd in
+            swd.date
+        }
+        
     }
 }
 
