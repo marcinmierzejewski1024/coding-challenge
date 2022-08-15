@@ -11,6 +11,7 @@ class AppState : ObservableObject
 {
     @Published var shiftsViewModel = ShiftListViewModel();
     
+    
 }
 
 

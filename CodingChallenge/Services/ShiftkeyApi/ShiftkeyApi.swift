@@ -9,7 +9,7 @@ import Foundation
 
 public struct BaseShiftkeyApiResponse : Codable {
     
-//    var `class`: String?
+    var `class`: String?
     var alert: Alert?
     var additional: String?
     

@@ -12,18 +12,27 @@ class ShiftListViewModel : ObservableObject, Resolving
 {
     @Published var sections : [ShiftsWithDate]?
     @Published var nextDate = Date()
+    @Published var loading = true
+
     
     lazy var shiftsService : ShiftsService = resolver.resolve()
     
-    
+    @MainActor
     func loadNextShifts() async{
         do {
-            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nil, address: "dallas, TX", radius: 5))
+            self.loading = true;
+            let nextDatePlusOneWeek = self.nextDate.advanced(by: 60*60*24*7)
+            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextDatePlusOneWeek, address: "dallas, TX", radius: 5))
             if let newShiftsByDate = result.data {
                 self.sections = newShiftsByDate
-                self.objectWillChange.send()
+                
+                var newNextDate = Date();
+                newNextDate = newShiftsByDate.reduce(nextDate) { partialResult, shiftsWithDate in
+                    return partialResult > shiftsWithDate.date ? partialResult : shiftsWithDate.date
+                }
+                self.nextDate = newNextDate;
+                self.loading = false;
             }
-//            print(result)
         } catch {
             print(error)
         }

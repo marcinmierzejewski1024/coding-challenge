@@ -8,21 +8,35 @@
 import SwiftUI
 
 struct ShiftList: View {
-    @State var shiftListViewModel : ShiftListViewModel
+    @ObservedObject var shiftListViewModel : ShiftListViewModel
     
     var body: some View {
-        List(){
+        
+        ZStack {
             
-            ForEach(self.shiftListViewModel.sections ?? [], id: \.date ) { section in
-                
-                Section(header: Text(section.date.shortDate())) {
-                    ForEach(section.shifts, id: \.shiftID ) { item in
-                        ShiftCell(shift: item)
-
+            List(){
+                ForEach(self.shiftListViewModel.sections ?? [], id: \.date ) { section in
+                    Section(header: Text(section.date.YYYYMMDDString())) {
+                        ForEach(section.shifts, id: \.shiftID ) { item in
+                            ShiftCell(shift: item)
+                            
+                        }
+                    }.onAppear {
+                        if section == self.shiftListViewModel.sections?.last {
+                            Task {
+                                await self.shiftListViewModel.loadNextShifts()
+                            }
+                            
+                        }
                     }
                 }
             }
+            
+            if self.shiftListViewModel.loading {
+                LoadingView()
+            }
         }
+        
     }
 }
 

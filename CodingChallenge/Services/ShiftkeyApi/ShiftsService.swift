@@ -39,10 +39,10 @@ public struct ShiftServiceRequest {
         let iso8601Formatter = ISO8601DateFormatter()
         
         if let start = start {
-            urlItems.append(URLQueryItem(name: "start", value: iso8601Formatter.string(from: start)))
+            urlItems.append(URLQueryItem(name: "start", value: start.YYYYMMDDString()))
         }
         if let end = end {
-            urlItems.append(URLQueryItem(name: "end", value: iso8601Formatter.string(from: end)))
+            urlItems.append(URLQueryItem(name: "end", value: end.YYYYMMDDString()))
         }
         if let radius = radius {
             urlItems.append(URLQueryItem(name: "radius", value: radius.description))
@@ -93,31 +93,5 @@ protocol ShiftsService {
 
 
 
-extension ShiftServiceResponse : Mockable {
-    typealias T = ShiftServiceResponse
     
-    static var mocked: ShiftServiceResponse {
-let json = """
-{\"data\":[],\"links\":[],\"meta\":{\"lat\":32.7766642,\"lng\":-96.79698789999999}}
-"""
-//        let json = """
-//        {
-//            "class": "App\\Exceptions\\UnprocessableEntityException",
-//            "alert": {
-//                "headline": "Unprocessable Entity",
-//                "message": "Unable to geocode the provided address.",
-//                "details": null
-//            },
-//            "additional": null
-//        }
-//"""
 
-        let decoder = JSONDecoder();
-        
-        let data = json.data(using: .utf8);
-        let result = try! JSONDecoder().decode(ShiftServiceResponse.self, from: data!)
-        return result;
-    }
-    
-    
-}

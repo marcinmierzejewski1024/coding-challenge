@@ -14,6 +14,7 @@ struct ShiftCell: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Text(shift.localizedSpecialty.name).bold()
+                Spacer()
                 PillView(color: Color(shift.skill.color) , text: shift.skill.name)
             }
             HStack {

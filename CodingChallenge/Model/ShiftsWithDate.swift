@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ShiftsWithDate : Codable
+struct ShiftsWithDate : Codable, Equatable
 {
     let date : Date
     let shifts: [Shift]

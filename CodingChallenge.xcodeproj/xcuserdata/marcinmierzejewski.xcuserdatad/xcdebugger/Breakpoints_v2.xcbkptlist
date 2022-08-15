@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E1B0E6F3-9BA6-48A8-AAE9-983CADB88418"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CodingChallenge/Services/ShiftkeyApi/ShiftsService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "mocked"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "027A4CF9-829A-47E4-B111-DBBD072A3FDD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "CodingChallenge/ViewModels/ShiftListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "loadNextShifts()"
             landmarkType = "7">
          </BreakpointContent>
@@ -66,6 +50,54 @@
             endingLineNumber = "31"
             landmarkName = "getShifts(request:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F31E328D-9A18-484A-8C4A-867A8C22467B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodingChallenge/ViewModels/ShiftListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "loadNextShifts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F31E328D-9A18-484A-8C4A-867A8C22467B - 90172aba9a1613f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CodingChallenge.ShiftListViewModel.loadNextShifts() async -&gt; ()"
+                  moduleName = "CodingChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcinmierzejewski/ios-coding-challenge/CodingChallenge/ViewModels/ShiftListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "F31E328D-9A18-484A-8C4A-867A8C22467B - 90172aba9a1613f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CodingChallenge.ShiftListViewModel.loadNextShifts() async -&gt; ()"
+                  moduleName = "CodingChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcinmierzejewski/ios-coding-challenge/CodingChallenge/ViewModels/ShiftListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
