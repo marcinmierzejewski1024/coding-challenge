@@ -19,16 +19,9 @@ class ShiftsServiceImpl : Resolving, ShiftsService {
         let apiRequest = request.toApiRequest();
         let data = try await self.apiClient.httpRequestAsync(apiRequest);
         
-        let string = String(data: data, encoding: .utf8);
-        do {
-            let response = try BaseShiftkeyApiResponse.decoder().decode(ShiftServiceResponse.self, from: data)
-            return response
-
-        } catch
-        {
-            print("err \(error)")
-        }
-        return ShiftServiceResponse(data: [ShiftsWithDate(date: Date(), shifts: [])])
+//        let string = String(data: data, encoding: .utf8);
+        let response = try BaseShiftkeyApiResponse.decoder().decode(ShiftServiceResponse.self, from: data)
+        return response
         
     }
     

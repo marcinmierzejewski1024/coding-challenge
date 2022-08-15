@@ -90,6 +90,7 @@ public struct Meta : Codable {
 
 
 
+
 protocol ShiftsService {
     func getShifts(request:ShiftServiceRequest) async throws -> ShiftServiceResponse;
 }

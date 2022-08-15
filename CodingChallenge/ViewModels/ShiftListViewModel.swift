@@ -16,6 +16,9 @@ class ShiftListViewModel : ObservableObject, Resolving
     @Published var showingDetails = false
     @Published var detailsShift : Shift?
     
+    @Published var errorDetails : String?
+
+    
     
     lazy var shiftsService : ShiftsService = resolver.resolve()
     
@@ -25,16 +28,22 @@ class ShiftListViewModel : ObservableObject, Resolving
             self.loading = true;
             let nextPlus7Days = self.nextDate.addingTimeInterval(24*60*60*7)
             
-            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextPlus7Days, address: "dallas,TX", radius: 5))
+            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextPlus7Days, address: "Dallas, TX", radius: 50))
+            self.loading = false;
+
             if let newShiftsByDate = result.data {
                 self.addNewResultToSections(newShifts: newShiftsByDate)
-                
-                self.loading = false;
+            } else {
+                self.errorDetails = result.alert?.message;
             }
         } catch {
             print(error)
+            self.errorDetails = error.localizedDescription
         }
+        
+        
     }
+    
     
     func showDetails(_ item:Shift) {
         

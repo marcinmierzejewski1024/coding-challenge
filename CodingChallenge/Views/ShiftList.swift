@@ -34,9 +34,14 @@ struct ShiftList: View {
                 }
             }
             
+            
+            if let err = self.shiftListViewModel.errorDetails {
+                Text(err).bold().background(Color.background).padding()
+            }
             if self.shiftListViewModel.loading {
                 LoadingView()
             }
+            
         }
         .sheet(isPresented: $shiftListViewModel.showingDetails) {
             ShiftDetails(shift: shiftListViewModel.detailsShift!)

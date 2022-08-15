@@ -13,8 +13,6 @@
 		2349FD6D261E4F6A00A1FEAA /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD6C261E4F6A00A1FEAA /* CodingChallengeTests.swift */; };
 		2349FD78261E4F6A00A1FEAA /* CodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD77261E4F6A00A1FEAA /* CodingChallengeUITests.swift */; };
 		2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349FD88261E4F9900A1FEAA /* ShiftsView.swift */; };
-		567D3C1928A9660F00753C19 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C1828A9660F00753C19 /* Collections */; };
-		567D3C1B28A9660F00753C19 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C1A28A9660F00753C19 /* OrderedCollections */; };
 		567D3C1D28A9664F00753C19 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C1C28A9664F00753C19 /* ShiftCell.swift */; };
 		567D3C1F28A9668400753C19 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C1E28A9668400753C19 /* Shift.swift */; };
 		567D3C2228A969FD00753C19 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2128A969FD00753C19 /* Mocks.swift */; };
@@ -96,8 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				567D3C3828A989BC00753C19 /* Resolver in Frameworks */,
-				567D3C1B28A9660F00753C19 /* OrderedCollections in Frameworks */,
-				567D3C1928A9660F00753C19 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +265,6 @@
 			);
 			name = CodingChallenge;
 			packageProductDependencies = (
-				567D3C1828A9660F00753C19 /* Collections */,
-				567D3C1A28A9660F00753C19 /* OrderedCollections */,
 				567D3C3728A989BC00753C19 /* Resolver */,
 			);
 			productName = CodingChallenge;
@@ -345,7 +339,6 @@
 			);
 			mainGroup = 2349FD4E261E4F6900A1FEAA;
 			packageReferences = (
-				567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 2349FD58261E4F6900A1FEAA /* Products */;
@@ -733,14 +726,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Resolver.git";
@@ -752,16 +737,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		567D3C1828A9660F00753C19 /* Collections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-		567D3C1A28A9660F00753C19 /* OrderedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = OrderedCollections;
-		};
 		567D3C3728A989BC00753C19 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */;
