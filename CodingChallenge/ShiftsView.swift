@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ShiftsView: View {
+    @EnvironmentObject var appState : AppState;
+    
     var body: some View {
         NavigationView {
             Group {
-                ShiftList(shiftListViewModel: ShiftListViewModel.mocked)
+                ShiftList(shiftListViewModel: appState.shiftsViewModel).onAppear(){
+                    Task {
+                        ShiftsWithDate.mocked
+                        await appState.shiftsViewModel.loadNextShifts()
+                    }
+                }
+                
 
             }
             .navigationTitle("Shifts")

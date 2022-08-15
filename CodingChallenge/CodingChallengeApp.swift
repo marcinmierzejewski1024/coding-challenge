@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CodingChallengeApp: App {
+    @StateObject var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ShiftsView()
+            ShiftsView().environmentObject(appState)
         }
     }
 }

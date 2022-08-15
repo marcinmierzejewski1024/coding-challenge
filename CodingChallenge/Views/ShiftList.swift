@@ -13,8 +13,14 @@ struct ShiftList: View {
     var body: some View {
         List(){
             
-            ForEach(self.shiftListViewModel.shifts ?? [], id: \.shiftID ) { item in
-                ShiftCell(shift: item)
+            ForEach(self.shiftListViewModel.sections ?? [], id: \.date ) { section in
+                
+                Section(header: Text(section.date.shortDate())) {
+                    ForEach(section.shifts, id: \.shiftID ) { item in
+                        ShiftCell(shift: item)
+
+                    }
+                }
             }
         }
     }

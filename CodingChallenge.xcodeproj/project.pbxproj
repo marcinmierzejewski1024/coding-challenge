@@ -26,6 +26,14 @@
 		567D3C3028A976B900753C19 /* ShiftsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C2F28A976B900753C19 /* ShiftsService.swift */; };
 		567D3C3328A9790300753C19 /* ShiftkeyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3228A9790300753C19 /* ShiftkeyApi.swift */; };
 		567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */; };
+		567D3C3828A989BC00753C19 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C3728A989BC00753C19 /* Resolver */; };
+		567D3C3B28A989DD00753C19 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3A28A989DD00753C19 /* Register.swift */; };
+		567D3C3E28A9AE6700753C19 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3D28A9AE6700753C19 /* BaseRepository.swift */; };
+		567D3C4028A9B09E00753C19 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3F28A9B09E00753C19 /* Color+hex.swift */; };
+		567D3C4228A9B1CB00753C19 /* ShiftsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */; };
+		567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4328A9B3AD00753C19 /* AppState.swift */; };
+		567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */; };
+		567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4728AA69CE00753C19 /* Date+pretty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,13 @@
 		567D3C2F28A976B900753C19 /* ShiftsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsService.swift; sourceTree = "<group>"; };
 		567D3C3228A9790300753C19 /* ShiftkeyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftkeyApi.swift; sourceTree = "<group>"; };
 		567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsServiceImpl.swift; sourceTree = "<group>"; };
+		567D3C3A28A989DD00753C19 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		567D3C3D28A9AE6700753C19 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		567D3C3F28A9B09E00753C19 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
+		567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsRepository.swift; sourceTree = "<group>"; };
+		567D3C4328A9B3AD00753C19 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsWithDate.swift; sourceTree = "<group>"; };
+		567D3C4728AA69CE00753C19 /* Date+pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+pretty.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567D3C3828A989BC00753C19 /* Resolver in Frameworks */,
 				567D3C1B28A9660F00753C19 /* OrderedCollections in Frameworks */,
 				567D3C1928A9660F00753C19 /* Collections in Frameworks */,
 			);
@@ -121,6 +137,8 @@
 		2349FD59261E4F6900A1FEAA /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				567D3C3C28A9AE4300753C19 /* Repositories */,
+				567D3C3928A989CB00753C19 /* DI */,
 				567D3C2628A96E4A00753C19 /* ViewModels */,
 				567D3C0F28A8FF3200753C19 /* Utils */,
 				567D3C0E28A8FF1A00753C19 /* Services */,
@@ -165,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				567D3C1E28A9668400753C19 /* Shift.swift */,
+				567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */,
 				567D3C2128A969FD00753C19 /* Mocks.swift */,
 			);
 			path = Model;
@@ -193,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				567D3C2928A96ED800753C19 /* Blueprints.swift */,
+				567D3C3F28A9B09E00753C19 /* Color+hex.swift */,
+				567D3C4728AA69CE00753C19 /* Date+pretty.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				567D3C2728A96E6E00753C19 /* ShiftListViewModel.swift */,
+				567D3C4328A9B3AD00753C19 /* AppState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +235,23 @@
 				567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */,
 			);
 			path = ShiftkeyApi;
+			sourceTree = "<group>";
+		};
+		567D3C3928A989CB00753C19 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C3A28A989DD00753C19 /* Register.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		567D3C3C28A9AE4300753C19 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				567D3C3D28A9AE6700753C19 /* BaseRepository.swift */,
+				567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +273,7 @@
 			packageProductDependencies = (
 				567D3C1828A9660F00753C19 /* Collections */,
 				567D3C1A28A9660F00753C19 /* OrderedCollections */,
+				567D3C3728A989BC00753C19 /* Resolver */,
 			);
 			productName = CodingChallenge;
 			productReference = 2349FD57261E4F6900A1FEAA /* CodingChallenge.app */;
@@ -308,6 +348,7 @@
 			mainGroup = 2349FD4E261E4F6900A1FEAA;
 			packageReferences = (
 				567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 2349FD58261E4F6900A1FEAA /* Products */;
 			projectDirPath = "";
@@ -354,10 +395,17 @@
 				567D3C2828A96E6E00753C19 /* ShiftListViewModel.swift in Sources */,
 				567D3C3028A976B900753C19 /* ShiftsService.swift in Sources */,
 				567D3C1F28A9668400753C19 /* Shift.swift in Sources */,
+				567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */,
+				567D3C3E28A9AE6700753C19 /* BaseRepository.swift in Sources */,
+				567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */,
+				567D3C4228A9B1CB00753C19 /* ShiftsRepository.swift in Sources */,
 				567D3C2C28A9720900753C19 /* ApiClient.swift in Sources */,
+				567D3C3B28A989DD00753C19 /* Register.swift in Sources */,
+				567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */,
 				567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */,
 				567D3C1D28A9664F00753C19 /* ShiftCell.swift in Sources */,
 				567D3C2A28A96ED800753C19 /* Blueprints.swift in Sources */,
+				567D3C4028A9B09E00753C19 /* Color+hex.swift in Sources */,
 				2349FD89261E4F9900A1FEAA /* ShiftsView.swift in Sources */,
 				2349FD5B261E4F6900A1FEAA /* CodingChallengeApp.swift in Sources */,
 				567D3C2528A96E1B00753C19 /* ShiftList.swift in Sources */,
@@ -693,6 +741,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -705,6 +761,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 567D3C1728A9660F00753C19 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
+		};
+		567D3C3728A989BC00753C19 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 567D3C3628A989BC00753C19 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

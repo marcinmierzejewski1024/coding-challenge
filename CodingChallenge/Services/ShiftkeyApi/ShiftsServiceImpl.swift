@@ -6,14 +6,32 @@
 //
 
 import Foundation
+import Resolver
 
 
 
-//class ShiftServiceImpl : ShiftsService {
-//    
-//    func getShifts(request: ShiftServiceRequest) async throws -> ShiftServiceResponse {
-//    }
-//    
-//    
-//    
-//}
+class ShiftsServiceImpl : Resolving, ShiftsService {
+    
+    lazy var apiClient : ApiClient = resolver.resolve()
+    
+    func getShifts(request: ShiftServiceRequest) async throws -> ShiftServiceResponse {
+        
+        let apiRequest = request.toApiRequest();
+        let data = try await self.apiClient.httpRequestAsync(apiRequest);
+        
+        let string = String(data: data, encoding: .utf8);
+        do {
+            let response = try BaseShiftkeyApiResponse.decoder().decode(ShiftServiceResponse.self, from: data)
+            return response
+
+        } catch
+        {
+            print("err \(error)")
+        }
+        return ShiftServiceResponse(data: [ShiftsWithDate(date: Date(), shifts: [])])
+        
+    }
+    
+    
+    
+}

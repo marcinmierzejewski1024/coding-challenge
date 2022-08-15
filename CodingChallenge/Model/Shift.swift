@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct Shift: Codable {
-    let shiftID: Int
+struct Shift: Codable, Hashable {
+    let shiftID: Int?
     let startTime : Date
     let endTime: Date
 //    let normalizedStartDateTime : Date
@@ -38,6 +38,15 @@ struct Shift: Codable {
         case skill
         case localizedSpecialty = "localized_specialty"
     }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.shiftID)
+    }
+    
+    static func == (lhs: Shift, rhs: Shift) -> Bool {
+        return lhs.shiftID == rhs.shiftID
+    }
+
 }
 
 struct Skill: Codable {

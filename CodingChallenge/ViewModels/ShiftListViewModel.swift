@@ -6,11 +6,28 @@
 //
 
 import Foundation
+import Resolver
 
-class ShiftListViewModel : ObservableObject
+class ShiftListViewModel : ObservableObject, Resolving
 {
-    @Published var shifts : [Shift]?;
+    @Published var sections : [ShiftsWithDate]?
+    @Published var nextDate = Date()
     
+    lazy var shiftsService : ShiftsService = resolver.resolve()
+    
+    
+    func loadNextShifts() async{
+        do {
+            let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nil, address: "dallas, TX", radius: 5))
+            if let newShiftsByDate = result.data {
+                self.sections = newShiftsByDate
+                self.objectWillChange.send()
+            }
+//            print(result)
+        } catch {
+            print(error)
+        }
+    }
 }
 
 
@@ -19,7 +36,7 @@ extension ShiftListViewModel : Mockable {
     
     static var mocked: ShiftListViewModel {
         let mock = ShiftListViewModel()
-        mock.shifts = [Shift.mocked, Shift.mocked, Shift.mocked, Shift.mocked]
+        mock.sections = [ShiftsWithDate.mocked, ShiftsWithDate.mocked, ShiftsWithDate.mocked, ShiftsWithDate.mocked]
         return mock
     }
     
