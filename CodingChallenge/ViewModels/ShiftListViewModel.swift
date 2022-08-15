@@ -13,7 +13,9 @@ class ShiftListViewModel : ObservableObject, Resolving
     @Published var sections = [ShiftsWithDate]()
     @Published var nextDate = Date()
     @Published var loading = true
-
+    @Published var showingDetails = false
+    @Published var detailsShift : Shift?
+    
     
     lazy var shiftsService : ShiftsService = resolver.resolve()
     
@@ -34,6 +36,12 @@ class ShiftListViewModel : ObservableObject, Resolving
         }
     }
     
+    func showDetails(_ item:Shift) {
+        
+        self.detailsShift = item;
+        self.showingDetails = true
+
+    }
     
     private func addNewResultToSections(newShifts:[ShiftsWithDate]) {
         

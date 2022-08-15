@@ -18,7 +18,9 @@ struct ShiftList: View {
                 ForEach(self.shiftListViewModel.sections, id: \.date ) { section in
                     Section(header: Text(section.date.YYYYMMDDString())) {
                         ForEach(section.shifts, id: \.shiftID ) { item in
-                            ShiftCell(shift: item)
+                            ShiftCell(shift: item).onTapGesture {
+                                shiftListViewModel.showDetails(item)
+                            }
                             
                         }
                     }.onAppear {
@@ -36,6 +38,10 @@ struct ShiftList: View {
                 LoadingView()
             }
         }
+        .sheet(isPresented: $shiftListViewModel.showingDetails) {
+            ShiftDetails(shift: shiftListViewModel.detailsShift!)
+        }
+
         
     }
 }
