@@ -36,7 +36,6 @@ public struct ShiftServiceRequest {
             urlItems.append(URLQueryItem(name: "type", value: type.rawValue))
         }
         
-        let iso8601Formatter = ISO8601DateFormatter()
         
         if let start = start {
             urlItems.append(URLQueryItem(name: "start", value: start.YYYYMMDDString()))

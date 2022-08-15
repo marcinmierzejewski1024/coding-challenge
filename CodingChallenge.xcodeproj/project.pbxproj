@@ -28,9 +28,7 @@
 		567D3C3528A97DA500753C19 /* ShiftsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */; };
 		567D3C3828A989BC00753C19 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 567D3C3728A989BC00753C19 /* Resolver */; };
 		567D3C3B28A989DD00753C19 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3A28A989DD00753C19 /* Register.swift */; };
-		567D3C3E28A9AE6700753C19 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3D28A9AE6700753C19 /* BaseRepository.swift */; };
 		567D3C4028A9B09E00753C19 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C3F28A9B09E00753C19 /* Color+hex.swift */; };
-		567D3C4228A9B1CB00753C19 /* ShiftsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */; };
 		567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4328A9B3AD00753C19 /* AppState.swift */; };
 		567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */; };
 		567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4728AA69CE00753C19 /* Date+pretty.swift */; };
@@ -80,9 +78,7 @@
 		567D3C3228A9790300753C19 /* ShiftkeyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftkeyApi.swift; sourceTree = "<group>"; };
 		567D3C3428A97DA500753C19 /* ShiftsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsServiceImpl.swift; sourceTree = "<group>"; };
 		567D3C3A28A989DD00753C19 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
-		567D3C3D28A9AE6700753C19 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		567D3C3F28A9B09E00753C19 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
-		567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsRepository.swift; sourceTree = "<group>"; };
 		567D3C4328A9B3AD00753C19 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsWithDate.swift; sourceTree = "<group>"; };
 		567D3C4728AA69CE00753C19 /* Date+pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+pretty.swift"; sourceTree = "<group>"; };
@@ -141,7 +137,6 @@
 		2349FD59261E4F6900A1FEAA /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				567D3C3C28A9AE4300753C19 /* Repositories */,
 				567D3C3928A989CB00753C19 /* DI */,
 				567D3C2628A96E4A00753C19 /* ViewModels */,
 				567D3C0F28A8FF3200753C19 /* Utils */,
@@ -249,15 +244,6 @@
 				567D3C3A28A989DD00753C19 /* Register.swift */,
 			);
 			path = DI;
-			sourceTree = "<group>";
-		};
-		567D3C3C28A9AE4300753C19 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				567D3C3D28A9AE6700753C19 /* BaseRepository.swift */,
-				567D3C4128A9B1CB00753C19 /* ShiftsRepository.swift */,
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,9 +390,7 @@
 				567D3C4C28AA884600753C19 /* LoadingView.swift in Sources */,
 				567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */,
 				567D3C4A28AA6B4100753C19 /* PillView.swift in Sources */,
-				567D3C3E28A9AE6700753C19 /* BaseRepository.swift in Sources */,
 				567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */,
-				567D3C4228A9B1CB00753C19 /* ShiftsRepository.swift in Sources */,
 				567D3C2C28A9720900753C19 /* ApiClient.swift in Sources */,
 				567D3C3B28A989DD00753C19 /* Register.swift in Sources */,
 				567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */,
