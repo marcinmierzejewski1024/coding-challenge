@@ -40,7 +40,7 @@ struct ShiftList: View {
         }
         .sheet(isPresented: $shiftListViewModel.showingDetails) {
             ShiftDetails(shift: shiftListViewModel.detailsShift!)
-        }
+        }.listStyle(GroupedListStyle())
 
         
     }
