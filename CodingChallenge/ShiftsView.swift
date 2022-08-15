@@ -15,7 +15,6 @@ struct ShiftsView: View {
             Group {
                 ShiftList(shiftListViewModel: appState.shiftsViewModel).onAppear(){
                     Task {
-                        ShiftsWithDate.mocked
                         await appState.shiftsViewModel.loadNextShifts()
                     }
                 }

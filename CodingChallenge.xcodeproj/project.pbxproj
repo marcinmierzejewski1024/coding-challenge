@@ -34,6 +34,7 @@
 		567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4328A9B3AD00753C19 /* AppState.swift */; };
 		567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */; };
 		567D3C4828AA69CE00753C19 /* Date+pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4728AA69CE00753C19 /* Date+pretty.swift */; };
+		567D3C4A28AA6B4100753C19 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D3C4928AA6B4100753C19 /* PillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		567D3C4328A9B3AD00753C19 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		567D3C4528AA60FB00753C19 /* ShiftsWithDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsWithDate.swift; sourceTree = "<group>"; };
 		567D3C4728AA69CE00753C19 /* Date+pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+pretty.swift"; sourceTree = "<group>"; };
+		567D3C4928AA6B4100753C19 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				567D3C1C28A9664F00753C19 /* ShiftCell.swift */,
 				567D3C2428A96E1B00753C19 /* ShiftList.swift */,
+				567D3C4928AA6B4100753C19 /* PillView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				567D3C3028A976B900753C19 /* ShiftsService.swift in Sources */,
 				567D3C1F28A9668400753C19 /* Shift.swift in Sources */,
 				567D3C4428A9B3AD00753C19 /* AppState.swift in Sources */,
+				567D3C4A28AA6B4100753C19 /* PillView.swift in Sources */,
 				567D3C3E28A9AE6700753C19 /* BaseRepository.swift in Sources */,
 				567D3C4628AA60FB00753C19 /* ShiftsWithDate.swift in Sources */,
 				567D3C4228A9B1CB00753C19 /* ShiftsRepository.swift in Sources */,

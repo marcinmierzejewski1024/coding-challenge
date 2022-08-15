@@ -11,12 +11,30 @@ struct ShiftCell: View {
     let shift : Shift;
     
     var body: some View {
-        Text(shift.shiftKind)
-    }
-}
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text(shift.localizedSpecialty.name).bold()
+                PillView(color: Color(shift.skill.color) , text: shift.skill.name)
+            }
+            HStack {
+                Image(systemName: "clock")
+                Text(shift.startTime.shortTime() + " - " + shift.endTime.shortTime())
+            }.font(.footnote)
 
-struct ShiftCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ShiftCell(shift: Shift.mocked)
+            HStack {
+                Image(systemName: "book")
+                Text(shift.facilityType.name)
+            }.font(.footnote)
+
+        }
+        
+        
+        
     }
 }
+    
+    struct ShiftCell_Previews: PreviewProvider {
+        static var previews: some View {
+            ShiftCell(shift: Shift.mocked)
+        }
+    }

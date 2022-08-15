@@ -60,6 +60,8 @@ struct FacilityType: Codable {
     let name: String
     let color: String
     let abbreviation: String?
+    
+
 }
 
 
