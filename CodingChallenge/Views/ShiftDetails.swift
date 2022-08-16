@@ -39,7 +39,7 @@ struct ShiftDetails: View {
             Button {
                 print("TODO:")
             } label: {
-                Text("Order service")
+                Text("Apply")
                     .padding(20)
             }
             
