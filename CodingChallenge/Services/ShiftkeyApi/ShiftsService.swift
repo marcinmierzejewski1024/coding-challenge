@@ -97,5 +97,18 @@ protocol ShiftsService {
 
 
 
-    
 
+class MockShiftService : ShiftsService {
+    
+    var responseResult : ShiftServiceResponse?;
+    
+    func getShifts(request: ShiftServiceRequest) async throws -> ShiftServiceResponse {
+
+        if let responseResult = responseResult {
+            return responseResult;
+        }
+        throw "mock error"
+    }
+    
+    
+}

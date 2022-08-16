@@ -14,3 +14,5 @@ extension String {
         return self.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
     }
 }
+
+extension String: Error {}
