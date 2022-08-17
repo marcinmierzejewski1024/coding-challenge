@@ -25,11 +25,11 @@ class ShiftListViewModel : ObservableObject, Resolving
     @MainActor
     func loadNextShifts() async{
         do {
-            self.loading = true;
             let nextPlus7Days = self.nextDate.addingTimeInterval(24*60*60*7)
-            
+
+            self.loading = true
             let result = try await self.shiftsService.getShifts(request: ShiftServiceRequest(type: .List, start: self.nextDate, end: nextPlus7Days, address: "Dallas, TX", radius: 50))
-            self.loading = false;
+            self.loading = false
 
             if let newShiftsByDate = result.data {
                 self.addNewResultToSections(newShifts: newShiftsByDate)
@@ -58,7 +58,7 @@ class ShiftListViewModel : ObservableObject, Resolving
         newNextDate = newShifts.reduce(nextDate) { partialResult, shiftsWithDate in
             return partialResult > shiftsWithDate.date ? partialResult : shiftsWithDate.date
         }
-        self.nextDate = newNextDate;
+        self.nextDate = newNextDate
 
         
         let newWithoutEmptyAndDuplicates = newShifts.filter({ $0.shifts.count > 0 && !self.displayedDates().contains($0.date)})
@@ -67,7 +67,7 @@ class ShiftListViewModel : ObservableObject, Resolving
         
     }
     
-    private func displayedDates() -> [Date]{
+    private func displayedDates() -> [Date] {
         return self.sections.map { swd in
             swd.date
         }

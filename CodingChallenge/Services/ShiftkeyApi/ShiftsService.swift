@@ -58,7 +58,7 @@ public struct ShiftServiceRequest {
     }
     
     func toApiRequest() -> ApiRequest{
-        return .Get(url: self.urlWithParamsEncoded(), headers: self.headers())
+        return .get(url: self.urlWithParamsEncoded(), headers: self.headers())
     }
 }
 

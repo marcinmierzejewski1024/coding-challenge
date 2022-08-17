@@ -23,17 +23,17 @@ public typealias ApiRequestHeaders = [String:String]
 
 
 public enum ApiRequest {
-    case Get(url:String, headers: ApiRequestHeaders?)
-    case Post(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
-    case Delete(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
+    case get(url:String, headers: ApiRequestHeaders?)
+    case post(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
+    case delete(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
     
     func method() ->String {
         switch self {
-        case .Get:
+        case .get:
             return "GET"
-        case .Post:
+        case .post:
             return "POST"
-        case .Delete:
+        case .delete:
             return "DELETE"
         }
     }
