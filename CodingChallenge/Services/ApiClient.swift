@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public struct ApiRequestBody {
     var body : [String:String]
     
@@ -26,7 +25,7 @@ public enum ApiRequest {
     case post(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
     case delete(url:String, body: ApiRequestBody, headers: ApiRequestHeaders?)
     
-    func method() ->String {
+    func method() -> String {
         switch self {
         case .get:
             return "GET"
@@ -42,9 +41,7 @@ public protocol ApiClient {
     func httpRequestAsync(_ request: ApiRequest) async throws -> Data
     func httpRequest(_ request: ApiRequest, completion: @escaping (_ data: Data?, _ error: Error?) -> Void)
     
-    
 }
-
 
 extension ApiClient {
     public func httpRequestAsync(_ request: ApiRequest) async throws -> Data {

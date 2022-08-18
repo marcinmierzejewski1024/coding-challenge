@@ -20,22 +20,26 @@ public class URLSessionApiClient : ApiClient {
         let httpMethod = request.method()
         var connectionHeaders : ApiRequestHeaders?
         
-        switch request {
-        case .get(let url, let headers):
-            urlString = url
-            connectionHeaders = headers
-            
-        case .post(let url, let body, let headers):
-            urlString = url
-            connectionBody = try! body.toData()
-            connectionHeaders = headers
-            
-            
-        case .delete(let url, let body, let headers):
-            urlString = url
-            connectionBody = try! body.toData()
-            connectionHeaders = headers
-            
+        do {
+            switch request {
+            case .get(let url, let headers):
+                urlString = url
+                connectionHeaders = headers
+                
+            case .post(let url, let body, let headers):
+                urlString = url
+                connectionBody = try body.toData()
+                connectionHeaders = headers
+                
+                
+            case .delete(let url, let body, let headers):
+                urlString = url
+                connectionBody = try body.toData()
+                connectionHeaders = headers
+                
+            }
+        } catch {
+            completion(nil, error)
         }
         
         if let urlString = urlString {
@@ -46,9 +50,8 @@ public class URLSessionApiClient : ApiClient {
             urlRequest.httpMethod = httpMethod
             urlRequest.allHTTPHeaderFields = connectionHeaders
             
-            
             let dataTask = session.dataTask(with: urlRequest) { data, response, error in
-                completion(data,error)
+                completion(data, error)
             }
             
             dataTask.resume()

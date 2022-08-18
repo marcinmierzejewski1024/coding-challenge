@@ -12,18 +12,13 @@ class AppState : ObservableObject
     @Published var shiftsViewModel = ShiftListViewModel()
 }
 
-
 extension AppState : Mockable
 {
-    typealias T = AppState
-    
+    typealias ReturnType = AppState
     
     static var mocked: AppState {
         let state = AppState()
         state.shiftsViewModel = ShiftListViewModel.mocked
         return state
     }
-    
-    
-    
 }

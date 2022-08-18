@@ -63,8 +63,8 @@ public struct ShiftServiceRequest {
 }
 
 extension ShiftServiceRequest : Mockable {
+    typealias ReturnType = ShiftServiceRequest
     
-    typealias T = ShiftServiceRequest
     static var mocked: ShiftServiceRequest {
         return ShiftServiceRequest(address: "Dallas, TX")
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Shift: Codable, Hashable {
     let shiftID: Int?
     let startTime : Date
@@ -60,10 +59,7 @@ struct FacilityType: Codable {
     let name: String
     let color: String
     let abbreviation: String?
-    
-    
 }
-
 
 struct LocalizedSpecialty: Codable {
     let id: Int

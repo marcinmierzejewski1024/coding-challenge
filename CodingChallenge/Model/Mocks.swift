@@ -10,8 +10,7 @@ import Foundation
 
 
 extension Shift : Mockable {
-    typealias T = Shift
-    
+    typealias ReturnType = Shift
     
     static var mocked : Shift = {
         let json = """
@@ -61,8 +60,7 @@ extension Shift : Mockable {
 
 
 extension ShiftsWithDate : Mockable {
-    typealias T = ShiftsWithDate
-    
+    typealias ReturnType = ShiftsWithDate
     
     static var mocked : ShiftsWithDate = {
         let json = """

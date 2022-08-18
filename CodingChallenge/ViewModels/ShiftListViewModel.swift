@@ -77,7 +77,7 @@ class ShiftListViewModel : ObservableObject, Resolving
 
 
 extension ShiftListViewModel : Mockable {
-    typealias T = ShiftListViewModel
+    typealias ReturnType = ShiftListViewModel
     
     static var mocked: ShiftListViewModel {
         let mock = ShiftListViewModel()

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Mockable {
-    associatedtype T
+    associatedtype ReturnType
     
-    static var mocked : T { get }
+    static var mocked : ReturnType { get }
 }
