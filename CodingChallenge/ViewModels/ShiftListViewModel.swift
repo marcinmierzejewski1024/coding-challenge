@@ -8,8 +8,7 @@
 import Foundation
 import Resolver
 
-class ShiftListViewModel : ObservableObject, Resolving
-{
+class ShiftListViewModel : ObservableObject, Resolving {
     @Published var sections = [ShiftsWithDate]()
     @Published var nextDate = Date()
     @Published var loading = true

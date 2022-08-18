@@ -8,11 +8,9 @@
 import Foundation
 
 public struct BaseShiftkeyApiResponse : Codable {
-    
     var `class`: String?
     var alert: Alert?
     var additional: String?
-    
     
     static func decoder() -> JSONDecoder {
         let decoder = JSONDecoder()
@@ -40,31 +38,9 @@ public struct BaseShiftkeyApiResponse : Codable {
     
     
 }
+
 public struct Alert: Codable {
     let headline: String
     let message: String
     let details: String?
-}
-
-
-
-
-extension DateFormatter {
-    static let iso8601Full: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter
-    }()
-    
-    static let yyyyMMdd: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter
-    }()
 }

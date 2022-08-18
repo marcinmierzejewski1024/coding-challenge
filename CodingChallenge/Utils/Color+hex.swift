@@ -28,15 +28,9 @@ extension Color {
              green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
              blue: CGFloat(rgbValue & 0x0000FF) / 255.0)
     }
-    
-    
-    
-    
 }
 
-
 public extension Color {
-    
 #if os(macOS)
     static let background = Color(NSColor.windowBackgroundColor)
     static let secondaryBackground = Color(NSColor.underPageBackgroundColor)

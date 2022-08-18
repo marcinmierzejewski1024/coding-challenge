@@ -7,13 +7,11 @@
 
 import Foundation
 
-class AppState : ObservableObject
-{
+class AppState : ObservableObject {
     @Published var shiftsViewModel = ShiftListViewModel()
 }
 
-extension AppState : Mockable
-{
+extension AppState : Mockable {
     typealias ReturnType = AppState
     
     static var mocked: AppState {

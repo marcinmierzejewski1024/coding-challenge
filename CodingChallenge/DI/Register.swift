@@ -12,11 +12,11 @@ import Resolver
 
 extension Resolver : ResolverRegistering {
     public static func registerAllServices() {
-        register(ApiClient.self) { resolver, args in
+        register(ApiClient.self) { _, _ in
             return URLSessionApiClient()
         }.scope(.graph)
         
-        register(ShiftsService.self) { resolver, args in
+        register(ShiftsService.self) { _, _ in
             return ShiftsServiceImpl()
         }.scope(.graph)
     }

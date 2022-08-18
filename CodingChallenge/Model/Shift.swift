@@ -83,5 +83,3 @@ struct Specialty: Codable {
     let color: String
     let abbreviation: String?
 }
-
-
