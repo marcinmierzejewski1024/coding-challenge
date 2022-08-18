@@ -14,7 +14,7 @@ extension Shift : Mockable {
     
     
     static var mocked : Shift = {
-let json = """
+        let json = """
 {
     "shift_id": 3517834,
     "start_time": "2022-08-14T19:00:00+00:00",
@@ -52,8 +52,8 @@ let json = """
 }
 """
         
-        let data = json.data(using: .utf8);
-        return try! BaseShiftkeyApiResponse.decoder().decode(Shift.self, from: data!);
+        let data = json.data(using: .utf8)
+        return try! BaseShiftkeyApiResponse.decoder().decode(Shift.self, from: data!)
         
     }()
 }
@@ -65,7 +65,7 @@ extension ShiftsWithDate : Mockable {
     
     
     static var mocked : ShiftsWithDate = {
-let json = """
+        let json = """
 {
     "date": "2022-08-15",
     "shifts": [
@@ -319,9 +319,9 @@ let json = """
 }
 """
         
-        let data = json.data(using: .utf8);
-        let result = try! BaseShiftkeyApiResponse.decoder().decode(ShiftsWithDate.self, from: data!);
+        let data = json.data(using: .utf8)
+        let result = try! BaseShiftkeyApiResponse.decoder().decode(ShiftsWithDate.self, from: data!)
         
-        return result;
+        return result
     }()
 }

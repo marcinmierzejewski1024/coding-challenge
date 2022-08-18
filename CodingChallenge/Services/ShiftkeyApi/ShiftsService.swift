@@ -12,14 +12,14 @@ public struct ShiftServiceRequest {
     static let BaseURL = "https://staging-app.shiftkey.com/api/v2/available_shifts"
     
     enum ListType : String {
-        case Week = "week"
-        case FourDay = "4day"
-        case List = "list"
+        case week = "week"
+        case fourDay = "4day"
+        case list = "list"
     }
     
-    var type : ListType?;
-    var start : Date?;
-    var end : Date?;
+    var type : ListType?
+    var start : Date?
+    var end : Date?
     var address : String
     var radius : Int?
     
@@ -47,7 +47,7 @@ public struct ShiftServiceRequest {
             urlItems.append(URLQueryItem(name: "radius", value: radius.description.urlEncoded))
         }
         
-        urlItems.append(URLQueryItem(name: "address", value: self.address.urlEncoded))
+        urlItems.append(URLQueryItem(name: "address", value: address.urlEncoded))
 
         var urlComponents = URLComponents(string: ShiftServiceRequest.BaseURL)
         urlComponents?.queryItems = urlItems;
@@ -58,7 +58,7 @@ public struct ShiftServiceRequest {
     }
     
     func toApiRequest() -> ApiRequest{
-        return .get(url: self.urlWithParamsEncoded(), headers: self.headers())
+        return .get(url: urlWithParamsEncoded(), headers: headers())
     }
 }
 
@@ -68,8 +68,6 @@ extension ShiftServiceRequest : Mockable {
     static var mocked: ShiftServiceRequest {
         return ShiftServiceRequest(address: "Dallas, TX")
     }
-    
-    
 }
 
 

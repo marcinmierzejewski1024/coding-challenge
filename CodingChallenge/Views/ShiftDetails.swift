@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShiftDetails: View {
-    let shift : Shift;
+    let shift : Shift
     
     var body: some View {
         

@@ -15,26 +15,26 @@ public class URLSessionApiClient : ApiClient {
     
     public func httpRequest(_ request: ApiRequest, completion: (@escaping (Data?, Error?) -> Void)) {
         
-        var urlString : String?;
-        var connectionBody : Data?;
+        var urlString : String?
+        var connectionBody : Data?
         let httpMethod = request.method()
         var connectionHeaders : ApiRequestHeaders?
         
         switch request {
         case .get(let url, let headers):
-            urlString = url;
-            connectionHeaders = headers;
+            urlString = url
+            connectionHeaders = headers
             
         case .post(let url, let body, let headers):
-            urlString = url;
+            urlString = url
             connectionBody = try! body.toData()
-            connectionHeaders = headers;
+            connectionHeaders = headers
             
             
         case .delete(let url, let body, let headers):
-            urlString = url;
+            urlString = url
             connectionBody = try! body.toData()
-            connectionHeaders = headers;
+            connectionHeaders = headers
             
         }
         
@@ -42,16 +42,16 @@ public class URLSessionApiClient : ApiClient {
             
             let urlFromString = URL(string: urlString)!
             var urlRequest = URLRequest(url: urlFromString)
-            urlRequest.httpBody = connectionBody;
-            urlRequest.httpMethod = httpMethod;
-            urlRequest.allHTTPHeaderFields = connectionHeaders;
+            urlRequest.httpBody = connectionBody
+            urlRequest.httpMethod = httpMethod
+            urlRequest.allHTTPHeaderFields = connectionHeaders
             
             
             let dataTask = session.dataTask(with: urlRequest) { data, response, error in
-                completion(data,error);
+                completion(data,error)
             }
             
-            dataTask.resume();
+            dataTask.resume()
         }
         
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Mockable {
-    associatedtype T;
+    associatedtype T
     
     static var mocked : T { get }
 }

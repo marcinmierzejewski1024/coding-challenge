@@ -15,7 +15,7 @@ struct ShiftList: View {
         ZStack {
             
             List(){
-                ForEach(self.shiftListViewModel.sections, id: \.date ) { section in
+                ForEach(shiftListViewModel.sections, id: \.date ) { section in
                     Section(header: Text(section.date.YYYYMMDDString())) {
                         ForEach(section.shifts, id: \.shiftID ) { item in
                             ShiftCell(shift: item).onTapGesture {
@@ -24,9 +24,9 @@ struct ShiftList: View {
                             
                         }
                     }.onAppear {
-                        if section == self.shiftListViewModel.sections.last {
+                        if section == shiftListViewModel.sections.last {
                             Task {
-                                await self.shiftListViewModel.loadNextShifts()
+                                await shiftListViewModel.loadNextShifts()
                             }
                             
                         }
@@ -35,10 +35,10 @@ struct ShiftList: View {
             }
             
             
-            if let err = self.shiftListViewModel.errorDetails {
+            if let err = shiftListViewModel.errorDetails {
                 Text(err).bold().background(Color.background).padding()
             }
-            if self.shiftListViewModel.loading {
+            if shiftListViewModel.loading {
                 LoadingView()
             }
             
@@ -46,7 +46,7 @@ struct ShiftList: View {
         .sheet(isPresented: $shiftListViewModel.showingDetails) {
             ShiftDetails(shift: shiftListViewModel.detailsShift!)
         }.listStyle(GroupedListStyle())
-
+        
         
     }
 }

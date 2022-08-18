@@ -12,8 +12,8 @@ struct Shift: Codable, Hashable {
     let shiftID: Int?
     let startTime : Date
     let endTime: Date
-//    let normalizedStartDateTime : Date
-//    let normalizedEndDateTime : Date
+    //    let normalizedStartDateTime : Date
+    //    let normalizedEndDateTime : Date
     let timezone: String
     let premiumRate: Bool
     let covid: Bool
@@ -22,13 +22,13 @@ struct Shift: Codable, Hashable {
     let facilityType: FacilityType
     let skill: Skill
     let localizedSpecialty: LocalizedSpecialty
-
+    
     enum CodingKeys: String, CodingKey {
         case shiftID = "shift_id"
         case startTime = "start_time"
         case endTime = "end_time"
-//        case normalizedStartDateTime = "normalized_start_date_time"
-//        case normalizedEndDateTime = "normalized_end_date_time"
+        //        case normalizedStartDateTime = "normalized_start_date_time"
+        //        case normalizedEndDateTime = "normalized_end_date_time"
         case timezone
         case premiumRate = "premium_rate"
         case covid
@@ -40,13 +40,13 @@ struct Shift: Codable, Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(self.shiftID)
+        hasher.combine(shiftID)
     }
     
     static func == (lhs: Shift, rhs: Shift) -> Bool {
         return lhs.shiftID == rhs.shiftID
     }
-
+    
 }
 
 struct Skill: Codable {
@@ -61,7 +61,7 @@ struct FacilityType: Codable {
     let color: String
     let abbreviation: String?
     
-
+    
 }
 
 
@@ -72,7 +72,7 @@ struct LocalizedSpecialty: Codable {
     let name: String
     let abbreviation: String
     let specialty: Specialty
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case specialtyID = "specialty_id"

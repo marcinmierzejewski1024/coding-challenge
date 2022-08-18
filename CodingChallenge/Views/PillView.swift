@@ -13,7 +13,7 @@ struct PillView: View {
     
     var body: some View {
         Text(text).font(.smallCaps(.footnote)())
-.foregroundColor(.white)
+            .foregroundColor(.white)
             .padding(4)
             .background(color)
             .clipShape(Capsule())

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShiftsView: View {
-    @EnvironmentObject var appState : AppState;
+    @EnvironmentObject var appState : AppState
     
     var body: some View {
         NavigationView {
@@ -18,8 +18,6 @@ struct ShiftsView: View {
                         await appState.shiftsViewModel.loadNextShifts()
                     }
                 }
-                
-
             }
             .navigationTitle("Shifts")
         }
