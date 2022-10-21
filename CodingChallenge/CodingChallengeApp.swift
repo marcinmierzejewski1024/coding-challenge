@@ -13,7 +13,7 @@ struct CodingChallengeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ShiftsView().environmentObject(appState)
+            ShiftsView(shiftsViewModel: ShiftListViewModel()).environmentObject(appState)
         }
     }
 }

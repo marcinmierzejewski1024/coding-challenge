@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ShiftsView: View {
-    @EnvironmentObject var appState : AppState
+    @StateObject var shiftsViewModel : ShiftListViewModel
     
     var body: some View {
         NavigationView {
             Group {
-                ShiftList(shiftListViewModel: appState.shiftsViewModel).onAppear(){
+                ShiftList(shiftListViewModel: shiftsViewModel).onAppear(){
                     Task {
-                        await appState.shiftsViewModel.loadNextShifts()
+                        await shiftsViewModel.loadNextShifts()
                     }
                 }
             }
@@ -26,6 +26,6 @@ struct ShiftsView: View {
 
 struct ShiftsView_Previews: PreviewProvider {
     static var previews: some View {
-        ShiftsView().environmentObject(AppState.mocked)
+        ShiftsView(shiftsViewModel: ShiftListViewModel.mocked)
     }
 }

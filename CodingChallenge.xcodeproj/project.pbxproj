@@ -138,6 +138,7 @@
 		2349FD59261E4F6900A1FEAA /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5644094C29031EC300A02BE5 /* Connectors */,
 				567D3C3928A989CB00753C19 /* DI */,
 				567D3C2628A96E4A00753C19 /* ViewModels */,
 				567D3C0F28A8FF3200753C19 /* Utils */,
@@ -177,6 +178,13 @@
 				2349FD79261E4F6A00A1FEAA /* Info.plist */,
 			);
 			path = CodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		5644094C29031EC300A02BE5 /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Connectors;
 			sourceTree = "<group>";
 		};
 		567D3C0C28A8FF0000753C19 /* Model */ = {

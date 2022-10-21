@@ -8,7 +8,7 @@
 import Foundation
 
 class AppState : ObservableObject {
-    @Published var shiftsViewModel = ShiftListViewModel()
+    //conector? 
 }
 
 extension AppState : Mockable {
@@ -16,7 +16,6 @@ extension AppState : Mockable {
     
     static var mocked: AppState {
         let state = AppState()
-        state.shiftsViewModel = ShiftListViewModel.mocked
         return state
     }
 }
